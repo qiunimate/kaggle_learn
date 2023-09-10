@@ -1,8 +1,11 @@
-# import utils
+import utils
 
 def add_three(input):
     output = input + 3
     return output
+
+def append_inplace(input_list, input_value):
+    input_list.append(input_value)
 
 def add_multiple(in1, in2):
     output = in1 + in2
@@ -31,7 +34,22 @@ if __name__ == '__main__':
     input2 = 4
     list_num = [1, 2, 3, 4, 5]
 
-    # res1 = add_multiple(input1, input2)
-    # res2 = arithmetic_func(input1, input2, func='asfdsv')
-    res3 = find_in_list(list_num, 3)
-    print(res3)
+    print("input1: {}".format(input1))
+    print("input2: {}".format(input2))
+    print('='*20)
+
+    print("return value of add_three(input1): {}".format(add_three(input1)))
+    print("input1 after add_three(input1): {}".format(input1))
+    print('='*20)
+
+    print("list_num: {}".format(list_num))
+    print("return value of append_inplace(list_num, input1): {}".format(append_inplace(list_num, input1)))
+    print("list_num after append_inplace(list_num, input1): {}".format(list_num))
+    print('='*20)
+
+    print("return value of add_multiple(input1, input2): {}".format(add_multiple(input1, input2)))
+    print("return value of arithmetic_func(input1, input2, func='add'): {}".format(arithmetic_func(input1, input2, func='add')))
+    print("return value of arithmetic_func(input1, input2, func='sub'): {}".format(arithmetic_func(input1, input2, func='sub')))
+    print("return value of arithmetic_func(input1, input2, func='mul'): {}".format(arithmetic_func(input1, input2, func='mul')))
+    print("return value of arithmetic_func(input1, input2, func='div'): {}".format(arithmetic_func(input1, input2, func='div')))
+
